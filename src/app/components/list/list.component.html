@@ -1,0 +1,10 @@
+<div [formGroup]="searchFormGroup">
+    <input formControlName="search">
+    <button (click)="onClick()">search</button>
+</div>
+
+<div *ngIf="result">
+    <div *ngFor="let item of result">
+        <a [href]="item.strYoutube" target="_blank">{{item.strMeal}}</a>
+    </div>
+</div>

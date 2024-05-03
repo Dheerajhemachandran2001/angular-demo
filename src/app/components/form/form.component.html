@@ -1,0 +1,16 @@
+<form action="" [formGroup]="loginForm" (submit)="onSubmit()">
+    <label for="username">username:</label>
+    <input type="text" formControlName="username"/>
+    <p *ngIf="loginForm.controls['username'].hasError('required')">required error</p>
+    <br>
+    <label for="password">password:</label>
+    <input type="password" formControlName="password" name="" id=""/>
+    <br>
+    <button type="submit">submit</button>
+    <br>
+    form is pristine:{{loginForm.pristine}}
+    <br>
+    form is dirty:{{loginForm.dirty}}
+    <br>
+    form is valid:{{loginForm.valid}}
+</form>
